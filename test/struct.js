@@ -1,8 +1,8 @@
-
+'use strict';
 var assert = require('assert')
   , ref = require('ref')
   , ArrayType = require('ref-array')
-  , Struct = require('../')
+  , Struct = require('../')(ref)
   , bindings = require('bindings')({ module_root: __dirname, bindings: 'struct_tests' })
 
 describe('Struct', function () {

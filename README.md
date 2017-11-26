@@ -1,12 +1,19 @@
-ref-struct
-==========
+ref-struct-di
+=============
 ### Create ABI-compliant "[struct][]" instances on top of Buffers
-[![Build Status](https://secure.travis-ci.org/TooTallNate/ref-struct.svg)](https://travis-ci.org/TooTallNate/ref-struct)
-[![Build Status](https://ci.appveyor.com/api/projects/status/6v4h5v5kh9kmtke8?svg=true)](https://ci.appveyor.com/project/TooTallNate/ref-struct)
 
+[![NPM Version](https://img.shields.io/npm/v/ref-struct-di.svg?style=flat)](https://npmjs.org/package/ref-struct-di)
+[![NPM Downloads](https://img.shields.io/npm/dm/ref-struct-di.svg?style=flat)](https://npmjs.org/package/ref-struct-di)
+[![Build Status](https://travis-ci.org/node-ffi-napi/ref-struct-di.svg?style=flat&branch=master)](https://travis-ci.org/node-ffi-napi/ref-struct-di?branch=master)
+[![Coverage Status](https://coveralls.io/repos/node-ffi-napi/ref-struct-di/badge.svg?branch=master)](https://coveralls.io/r/node-ffi-napi/ref-struct-di?branch=master)
+[![Dependency Status](https://david-dm.org/node-ffi-napi/ref-struct-di.svg?style=flat)](https://david-dm.org/node-ffi-napi/ref-struct-di)
 
 This module offers a "struct" implementation on top of Node.js Buffers
 using the ref "type" interface.
+
+**Note**: The only difference to `ref-struct` is that this module takes its
+dependency on `ref` via dependency injection, so that it is easier to use
+e.g. `ref-napi` instead.
 
 Installation
 ------------
@@ -14,7 +21,7 @@ Installation
 Install with `npm`:
 
 ``` bash
-$ npm install ref-struct
+$ npm install ref-struct-di
 ```
 
 
@@ -32,7 +39,7 @@ struct timeval {
 
 ``` js
 var ref = require('ref')
-var StructType = require('ref-struct')
+var StructType = require('ref-struct-di')(ref)
 
 // define the time types
 var time_t = ref.types.long
