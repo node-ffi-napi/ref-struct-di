@@ -2,6 +2,8 @@ ref-struct-di
 =============
 ### Create ABI-compliant "[struct][]" instances on top of Buffers
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/node-ffi-napi/ref-struct-di.svg)](https://greenkeeper.io/)
+
 [![NPM Version](https://img.shields.io/npm/v/ref-struct-di.svg?style=flat)](https://npmjs.org/package/ref-struct-di)
 [![NPM Downloads](https://img.shields.io/npm/dm/ref-struct-di.svg?style=flat)](https://npmjs.org/package/ref-struct-di)
 [![Build Status](https://travis-ci.org/node-ffi-napi/ref-struct-di.svg?style=flat&branch=master)](https://travis-ci.org/node-ffi-napi/ref-struct-di?branch=master)
