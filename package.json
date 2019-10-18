@@ -29,7 +29,7 @@
   "devDependencies": {
     "binding": "^3.0.3",
     "bindings": "~1.3.0",
-    "mocha": "^5.0.0",
+    "mocha": "^6.2.2",
     "nan": "^2.8.0",
     "nyc": "^12.0.1",
     "ref-array": "^1.2.0",
