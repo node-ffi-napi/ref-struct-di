@@ -121,7 +121,7 @@ describe('Struct', function () {
         'ptr2': 'void *'
       })
       var s = new S()
-      var b = new Buffer(1)
+      var b = Buffer.alloc(1)
       s.ptr1 = ref.NULL
       s.ptr2 = b
       assert.equal(ref.NULL.address(), s.ptr1.address())
@@ -138,7 +138,7 @@ describe('Struct', function () {
         test2: ref.types.int
       });
 
-      var b = new Buffer(Foo.size * 2);
+      var b = Buffer.alloc(Foo.size * 2);
 
       Foo.set(b, Foo.size * 0, {
         test1: 7123,
@@ -166,7 +166,7 @@ describe('Struct', function () {
         test2: ref.types.int
       });
 
-      var b = new Buffer(Foo.size * 2);
+      var b = Buffer.alloc(Foo.size * 2);
 
       Foo.set(b, Foo.size * 0, new Foo({
         test1: 7123,
