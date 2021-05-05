@@ -1,8 +1,8 @@
 'use strict';
 var assert = require('assert')
-  , ref = require('ref')
-  , ArrayType = require('ref-array')
-  , Struct = require('../')(ref)
+  , ref = require('ref-napi')
+  , ArrayType = require('ref-array-napi')
+  , Struct = require('..')(ref)
   , bindings = require('bindings')({ module_root: __dirname, bindings: 'struct_tests' })
 
 describe('Struct', function () {
@@ -56,7 +56,7 @@ describe('Struct', function () {
       , 'doubleVal': ref.types.double
       , 'pointer': ref.refType('void')
     })
-    var msTestPtr = new Buffer(1)
+    var msTestPtr = Buffer.alloc(1)
     var ms = new MegaStruct({
         byteVal: 100
       , int8Val: -100

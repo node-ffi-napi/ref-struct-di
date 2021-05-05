@@ -21,18 +21,20 @@
   "main": "./lib/struct.js",
   "license": "MIT",
   "scripts": {
-    "test": "node-gyp rebuild --directory test && nyc mocha -gc --reporter spec"
+    "test": "node-gyp rebuild --directory test && nyc mocha --expose-gc --reporter spec"
   },
   "dependencies": {
-    "debug": "^3.1.0"
+    "debug": "^4.3.1",
+    "node-gyp-build": "^4.2.1"
   },
   "devDependencies": {
-    "binding": "^3.0.3",
     "bindings": "~1.3.0",
-    "mocha": "^5.0.0",
-    "nan": "^2.8.0",
-    "nyc": "^12.0.1",
-    "ref-array": "^1.2.0",
-    "ref-napi": "^1.4.0"
+    "mocha": "^7.1.1",
+    "node-addon-api": "^3.0.0",
+    "nyc": "^15.0.0",
+    "prebuildify": "^4.0.0",
+    "prebuildify-ci": "^1.0.5",
+    "ref-array-napi": "^1.2.2",
+    "ref-napi": "^3.0.2"
   }
 }
