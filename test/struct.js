@@ -3,7 +3,7 @@ var assert = require('assert')
   , ref = require('ref-napi')
   , ArrayType = require('ref-array-napi')
   , Struct = require('..')(ref)
-  , bindings = require('bindings')({ module_root: __dirname, bindings: 'struct_tests' })
+  , bindings = require('node-gyp-build')(__dirname);
 
 describe('Struct', function () {
 
