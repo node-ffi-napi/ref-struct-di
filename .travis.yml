@@ -4,8 +4,6 @@ addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
-    packages:
-      - g++
 
 language: node_js
 
