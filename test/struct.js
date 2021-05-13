@@ -1,9 +1,9 @@
 'use strict';
 var assert = require('assert')
-  , ref = require('ref')
-  , ArrayType = require('ref-array')
-  , Struct = require('../')(ref)
-  , bindings = require('bindings')({ module_root: __dirname, bindings: 'struct_tests' })
+  , ref = require('ref-napi')
+  , ArrayType = require('ref-array-di')(ref)
+  , Struct = require('..')(ref)
+  , bindings = require('node-gyp-build')(__dirname);
 
 describe('Struct', function () {
 
@@ -56,7 +56,7 @@ describe('Struct', function () {
       , 'doubleVal': ref.types.double
       , 'pointer': ref.refType('void')
     })
-    var msTestPtr = new Buffer(1)
+    var msTestPtr = Buffer.alloc(1)
     var ms = new MegaStruct({
         byteVal: 100
       , int8Val: -100
