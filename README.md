@@ -40,7 +40,7 @@ struct timeval {
 ```
 
 ``` js
-var ref = require('ref')
+var ref = require('ref-napi')
 var StructType = require('ref-struct-di')(ref)
 
 // define the time types
@@ -62,7 +62,7 @@ var tv = new timeval()
 This gets very powerful when combined with `node-ffi` to invoke C functions:
 
 ``` js
-var ffi = require('ffi')
+var ffi = require('ffi-napi')
 
 var tv = new timeval()
 gettimeofday(tv.ref(), null)
@@ -76,8 +76,8 @@ instance of the struct type, then the struct type is finalized, and no more
 properties may be added to it.
 
 ``` js
-var ref = require('ref')
-var StructType = require('ref-struct')
+var ref = require('ref-napi')
+var StructType = require('ref-struct-di')(ref)
 
 var MyStruct = StructType()
 MyStruct.defineProperty('width', ref.types.int)
