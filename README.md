@@ -54,7 +54,7 @@ var timeval = StructType({
 })
 
 // now we can create instances of it
-var tv = new timeval
+var tv = new timeval()
 ```
 
 #### With `node-ffi`
@@ -64,7 +64,7 @@ This gets very powerful when combined with `node-ffi` to invoke C functions:
 ``` js
 var ffi = require('ffi')
 
-var tv = new timeval
+var tv = new timeval()
 gettimeofday(tv.ref(), null)
 ```
 
